@@ -1,0 +1,640 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+    box - sizing:border - box;
+    font - family:'Poppins',sans - serif;
+}
+
+body{
+
+    min-height:100vh;
+
+background: linear - gradient(135deg,#190533,#311b92,#512da8);
+
+    overflow - x:hidden;
+
+}
+
+/*=========================
+AUTH CONTAINER
+=========================*/
+
+.auth - container{
+
+display: flex;
+
+    min - height:100vh;
+
+}
+
+/*=========================
+LEFT PANEL
+=========================*/
+
+.left - panel{
+
+width: 50 %;
+
+background: url('/images/gym-bg.jpg');
+
+    background - size:cover;
+
+    background - position:center;
+
+position: relative;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+inset: 0;
+
+background: rgba(18, 8, 44, .70);
+
+padding: 80px;
+
+color: white;
+
+display: flex;
+
+flex - direction:column;
+
+justify - content:center;
+
+}
+
+/*=========================
+LOGO
+=========================*/
+
+.brand{
+
+    display:flex;
+
+align - items:center;
+
+gap: 15px;
+
+margin - bottom:40px;
+
+}
+
+.brand i
+{
+
+    font-size:45px;
+
+    color:#b388ff;
+
+}
+
+.brand h1
+{
+
+    font-size:40px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+.overlay h2
+{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.overlay p
+{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#d6d6d6;
+
+    margin-bottom:40px;
+
+}
+
+.overlay ul
+{
+
+    list-style:none;
+
+}
+
+.overlay li
+{
+
+    margin:18px 0;
+
+    font-size:18px;
+
+}
+
+.overlay li i{
+
+    color:#8e7dff;
+
+    margin - right:10px;
+
+}
+
+/*=========================
+RIGHT PANEL
+=========================*/
+
+.right - panel{
+
+width: 50 %;
+
+display: flex;
+
+    justify - content:center;
+
+    align - items:center;
+
+padding: 60px;
+
+}
+
+/*=========================
+GLASS CARD
+=========================*/
+
+.glass - card{
+
+width: 100 %;
+
+    max - width:650px;
+
+background: rgba(255, 255, 255, .08);
+
+    backdrop - filter:blur(25px);
+
+border: 1px solid rgba(255, 255, 255, .15);
+
+    border - radius:25px;
+
+padding: 45px;
+
+    box - shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.glass - card h2{
+
+    color:white;
+
+font - size:36px;
+
+text - align:center;
+
+margin - bottom:10px;
+
+}
+
+.subtitle{
+
+    color:#d9d9d9;
+
+    text - align:center;
+
+margin - bottom:35px;
+
+}
+
+/*=========================
+LABELS
+=========================*/
+
+label{
+
+    color:white;
+
+margin - bottom:8px;
+
+font - weight:500;
+
+display: block;
+
+}
+/*=========================
+INPUT BOX
+=========================*/
+
+.input - box{
+position: relative;
+}
+
+.input - box i{
+
+    position:absolute;
+
+left: 18px;
+
+top: 50 %;
+
+transform: translateY(-50 %);
+
+color:#9d7dff;
+
+    font - size:18px;
+
+}
+
+.input - box input{
+
+    padding-left:50px;
+padding - right:50px;
+
+}
+
+/*=========================
+FORM CONTROLS
+=========================*/
+
+.form - control,
+.form - select{
+
+height: 56px;
+
+border: none;
+
+    border - radius:15px;
+
+background: rgba(255, 255, 255, .95);
+
+transition: .35s;
+
+    font - size:15px;
+
+}
+
+.form - control:focus,
+.form-select:focus{
+
+    box-shadow:0 0 20px rgba(143,97,255,.45);
+
+transform: translateY(-2px);
+
+border: none;
+
+}
+
+/*=========================
+PASSWORD ICON
+=========================*/
+
+.eye{
+
+    position:absolute;
+
+right: 18px;
+
+top: 50 %;
+
+transform: translateY(-50 %);
+
+cursor: pointer;
+
+color:#666;
+
+    font - size:18px;
+
+}
+
+/*=========================
+BUTTON
+=========================*/
+
+.auth - btn{
+
+width: 100 %;
+
+height: 58px;
+
+    margin - top:20px;
+
+border: none;
+
+    border - radius:15px;
+
+    font - size:18px;
+
+    font - weight:600;
+
+color: white;
+
+cursor: pointer;
+
+background: linear - gradient(90deg,#7c4dff,#512da8);
+
+    transition: .35s;
+
+position: relative;
+
+overflow: hidden;
+
+}
+
+.auth - btn:hover{
+
+    transform:translateY(-3px);
+
+box - shadow:0 15px 35px rgba(92,54,255,.45);
+
+}
+
+.auth - btn::before{
+
+content: "";
+
+position: absolute;
+
+top: 0;
+
+left: -120 %;
+
+width: 100 %;
+
+height: 100 %;
+
+background: rgba(255, 255, 255, .25);
+
+transform: skewX(-25deg);
+
+transition: .6s;
+
+}
+
+.auth - btn:hover::before{
+
+left: 130 %;
+
+}
+
+/*=========================
+BOTTOM LINK
+=========================*/
+
+.bottom - link{
+
+    margin - top:25px;
+
+    text - align:center;
+
+color: white;
+
+}
+
+.bottom - link a{
+
+    color:#c7b8ff;
+
+    text - decoration:none;
+
+font - weight:600;
+
+}
+
+.bottom - link a: hover{
+
+    text - decoration:underline;
+
+}
+
+/*=========================
+VALIDATION
+=========================*/
+
+.text - danger{
+
+    font - size:13px;
+
+}
+
+/*=========================
+ANIMATION
+=========================*/
+
+.glass - card{
+
+animation: fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp
+{
+
+    from
+    {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    }
+
+    to
+    {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    }
+
+}
+
+/*=========================
+BACKGROUND CIRCLES
+=========================*/
+
+body::before{
+
+content: "";
+
+position: fixed;
+
+width: 320px;
+
+height: 320px;
+
+    border - radius:50 %;
+
+background: rgba(255, 255, 255, .08);
+
+top: -120px;
+
+left: -120px;
+
+    z - index:-1;
+
+}
+
+body::after{
+
+content: "";
+
+position: fixed;
+
+width: 420px;
+
+height: 420px;
+
+    border - radius:50 %;
+
+background: rgba(255, 255, 255, .05);
+
+right: -160px;
+
+bottom: -160px;
+
+    z - index:-1;
+
+}
+
+/*=========================
+HOVER EFFECT
+=========================*/
+
+.glass - card:hover{
+
+    transform:translateY(-5px);
+
+transition: .4s;
+
+box - shadow:0 30px 70px rgba(0,0,0,.45);
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max - width:992px){
+
+.auth - container{
+
+        flex - direction:column;
+
+    }
+
+.left - panel{
+
+    width: 100 %;
+
+    height: 320px;
+
+    }
+
+.right - panel{
+
+    width: 100 %;
+
+    padding: 30px;
+
+    }
+
+.overlay{
+
+    padding: 40px;
+
+    }
+
+.overlay h2{
+
+        font - size:34px;
+
+    }
+
+.brand h1{
+
+        font - size:32px;
+
+    }
+
+}
+
+@media(max - width:768px){
+
+.glass - card{
+
+    padding: 25px;
+
+    }
+
+.overlay{
+
+    padding: 30px;
+
+    }
+
+.overlay h2{
+
+        font - size:28px;
+
+    }
+
+.overlay p{
+
+        font - size:15px;
+
+    }
+
+.glass - card h2{
+
+        font - size:28px;
+
+    }
+
+}
+
+@media(max - width:576px){
+
+.glass - card{
+
+        border - radius:20px;
+
+    }
+
+.form - control,
+.form - select{
+
+    height: 50px;
+
+    }
+
+.auth - btn{
+
+    height: 52px;
+
+        font - size:16px;
+
+    }
+
+.overlay{
+
+        text - align:center;
+
+    }
+
+.brand{
+
+        justify - content:center;
+
+    }
+
+}
